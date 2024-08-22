@@ -22,7 +22,7 @@
   <div class="col-lg-9">
     {{ $paginator := .Paginate (.Data.Pages) -}}
     {{ range $paginator.Pages -}}
-      <div class="card">
+      <div class="card card-body p-0 content">
         {{ if site.Params.doks.imageList -}}
           {{- $images := .Resources.ByType "image" -}}
           {{- $featured := $images.GetMatch "*feature*" -}}
@@ -38,7 +38,7 @@
         {{ end -}}
         <div class="card-body">
           <article>
-            <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+            <h2 class="h3 card-title" style="color: inherit;"><a style="color: inherit !important;" class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
             <p>{{ .Params.summary | safeHTML }}</p>
             {{ partial "main/blog-meta.html" . -}}
           </article>

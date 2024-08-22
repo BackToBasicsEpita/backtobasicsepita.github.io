@@ -81,7 +81,12 @@
         {{- partialCached (printf "%s/%s" "docs" "footer/katex.html") . -}}
     {{ end }}
 
-    
+    <!-- Dark Mode -->
+    {{ if eq .Site.Params.docs.darkMode true -}}
+        {{ $darkModeInit := resources.Get (printf "/%s/%s" "docs" "js/darkmode-init.js") | js.Build | minify -}}
+        <script>{{ $darkModeInit.Content | safeJS }}</script>
+    {{ end -}}
+
 
     <!-- FlexSearch -->
     {{ if or (not (isset .Site.Params.flexsearch "enabled")) (eq .Site.Params.flexsearch.enabled true) -}}
