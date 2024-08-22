@@ -61,6 +61,12 @@ If so, collect and consolidate the items config from each enabled instance
         </script>
         {{ end }}
 
+	<!-- Dark Mode Switch JS -->
+        {{ if eq .Site.Params.docs.darkMode true -}}
+            {{ $darkModeSwitch := resources.Get (printf "/%s/%s" "docs" "js/darkmode-switch.js") | js.Build | minify }}
+            <script>{{ $darkModeSwitch.Content | safeJS }}</script>
+        {{ end -}}
+
         {{- partialCached (printf "footer/footer-scripts.html") . -}}
 
         <!-- DocSearch Config -->
