@@ -1,4 +1,4 @@
-module my-docs-site
+module github.com/BackToBasicsEpita/site
 
 go 1.21.4
 
