@@ -4,23 +4,16 @@
 
 Avant de commencer, assurez-vous d'avoir les outils suivants installés sur votre machine :
 
-- [Node.js](https://nodejs.org/) (v20.11.0 ou supérieure)
-- [Yarn](https://yarnpkg.com/) (on utilise **yarn**, et non npm)
-- [Hugo](https://gohugo.io/) (v0.125.0)
+- [Go](https://go.dev/) (minimum version v1.20)
+- [Hugo Extended](https://gohugo.io/) (minimum version: 0.120.0)
 
 ## Installation
 
-1. Clonez le repository du projet :
+Clonez le repository du projet :
 
 ```sh
    git clone https://github.com/BackToBasicsEpita/site.git
    cd site
-```
-
-2. Installez les dépendances :
-
-```sh
-   yarn install
 ```
 
 ## Développement
@@ -28,7 +21,7 @@ Avant de commencer, assurez-vous d'avoir les outils suivants installés sur votr
 Pour lancer le serveur de développement et voir votre site en local :
 
 ```sh
-    yarn dev
+    hugo server -D
 ```
 
 Le site sera disponible à l'adresse : [http://localhost:1313](http://localhost:1313).
