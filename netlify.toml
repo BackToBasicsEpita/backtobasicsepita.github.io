@@ -4,5 +4,6 @@
 
 [build.environment]
   HUGO_VERSION = "0.120.4"
+
 [context.deploy-preview]
   command = "hugo --buildDrafts"
