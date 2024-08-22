@@ -1,4 +1,4 @@
-baseURL = 'http://github.com/BackToBasicsEpita/site/'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'BackToBasics'
 
