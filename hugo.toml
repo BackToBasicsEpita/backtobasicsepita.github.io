@@ -1,4 +1,4 @@
-baseURL = 'https://backtobasics.github.io/site/'
+baseURL = 'https://backtobasics.github.io/'
 languageCode = 'en-us'
 title = 'BackToBasics'
 
