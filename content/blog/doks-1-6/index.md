@@ -1,6 +1,5 @@
 ---
 title: "Doks 1.6"
-url: "/blog/doks-1-6/"
 description: "Doks 1.6 is out! This release includes a new Hugo requirement, an improved scripts setup, new development tools, and more."
 summary: "Doks 1.6 is out! This release includes a new Hugo requirement, an improved <code>scripts</code> setup, new development tools, and more."
 date: 2024-05-16T09:03:10+02:00
@@ -75,28 +74,28 @@ Doks 1.6 introduces a cleaner `scripts` section in your projects' `package.json`
 
 Thulite/Doks now uses [Prettier](https://prettier.io/) as a code formatter and [Vite](https://vitejs.dev/) to preview your project's build. You can configure Prettier in the `.prettierrc.yaml` and `.prettierignore` files in the root of your project. With Vite, when you use the `--host` flag, you can preview the build on your local network — for example on your mobile phone — here's how:
 
-{{< tabs "create-new-site" >}}
-{{< tab "npm" >}}
+{{< tabs tabTotal="3">}}
+{{% tab title="npm" %}}
 
 ```bash
 npm run build -- --baseURL=/ && npm run preview -- --host
 ```
 
-{{< /tab >}}
-{{< tab "pnpm" >}}
+{{% /tab %}}
+{{% tab title="pnpm" %}}
 
 ```bash
 pnpm build --baseURL=/ && pnpm preview --host
 ```
 
-{{< /tab >}}
-{{< tab "Yarn" >}}
+{{% /tab %}}
+{{% tab title="Yarn" %}}
 
 ```bash
 yarn run build --baseURL=/ && yarn run preview --host
 ```
 
-{{< /tab >}}
+{{% /tab %}}
 {{< /tabs >}}
 
 <!-- omit in toc -->

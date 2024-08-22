@@ -16,4 +16,6 @@ title = 'BackToBasics'
 [params]
     [params.docs]
         darkMode = true
-        #themeColor = "blue" #blue (default), green, red, yellow, emerald, cardinal, magenta, cyan.
+        #themeColor = "blue" #blue (default), green, red, yellow, emerald, cardinal, magenta, cyan
+    [params.blog]
+        showImage = true

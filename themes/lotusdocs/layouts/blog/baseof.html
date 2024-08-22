@@ -39,7 +39,10 @@ If so, collect and consolidate the items config from each enabled instance
         <div class="mb-4" id="content" style="padding-top: 100px;">
             <div class="wrap container-fluid">
                 <div class="content">
-                    {{- block "main" . }}{{- end }}
+                    <div class="container p-0">
+                        {{- block "main" . }}{{- end }}
+                    </div>
+                    
                 </div>
             </div>
             
