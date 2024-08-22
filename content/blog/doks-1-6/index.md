@@ -1,15 +1,15 @@
 ---
-title: "Doks 1.6"
-description: "Doks 1.6 is out! This release includes a new Hugo requirement, an improved scripts setup, new development tools, and more."
-summary: "Doks 1.6 is out! This release includes a new Hugo requirement, an improved <code>scripts</code> setup, new development tools, and more."
-date: 2024-05-16T09:03:10+02:00
-lastmod: 2024-05-16T09:03:10+02:00
+title: "BackToBasics se fait peau neuve !"
+description: "Découvrez notre nouveau site, conçu pour vous offrir un accès simplifié à nos cours de soutien, tutorats et événements."
+summary: "Découvrez notre nouveau site, conçu pour vous offrir un accès simplifié à nos cours de soutien, tutorats et événements."
+date: 2024-08-22T19:50:00+02:00
+lastmod: 2024-08-22T19:50:00+02:00
 draft: false
 weight: 50
 categories: []
 tags: []
-contributors: ["Henk Verlinde"]
-pinned: false
+contributors: ["Axel Thauvin"]
+pinned: true
 homepage: false
 seo:
   title: "" # custom title (optional)
@@ -18,87 +18,29 @@ seo:
   noindex: false # false (default) or true
 ---
 
-Doks 1.6 is out! This release includes a new Hugo requirement, an improved `scripts` setup, new development tools, and more.
 
-To upgrade an existing project, see the [Upgrade Doks](/docs/start-here/upgrade-doks/) guide.
+# Bienvenue sur le nouveau site de BackToBasics (B2B) !
 
-<!-- omit in toc -->
-## Highlights
+Chers nouveaux élèves d'EPITA, c'est avec grand plaisir que nous vous accueillons sur le tout nouveau site de notre association, BackToBasics (B2B).
+Nous avons créé ce site pour offrir une plateforme moderne, intuitive et accessible, où vous pourrez trouver toutes les informations nécessaires pour réussir vos premières années à EPITA (et les suivantes 😁).
 
-- [New Hugo requirement](#new-hugo-requirement)
-- [Improved `scripts` setup](#improved-scripts-setup)
-- [New development tools](#new-development-tools)
+### Pourquoi un nouveau site ?
 
-## New Hugo requirement
+Nous avons repensé notre site internet pour plusieurs raisons. Tout d'abord, nous voulions qu'il soit plus facile pour vous de trouver les ressources et informations dont vous avez besoin, que ce soit pour suivre des cours de soutien, participer à des sessions de tutorat, ou tout simplement en savoir plus sur nos activités (via ce blog).
 
-Doks 1.6 now requires you to have the [latest Hugo extended version](https://github.com/gohugoio/hugo/releases/latest) installed globally on your system. See Hugo's documentation for [installation](https://gohugo.io/installation/) instructions.
 
-## Improved `scripts` setup
+Le nouveau site est conçu pour être responsive, c'est-à-dire qu'il s'adapte parfaitement à tous les supports, que vous soyez sur un ordinateur, une tablette ou un smartphone.
 
-Doks 1.6 introduces a cleaner `scripts` section in your projects' `package.json`:
 
-```json
-{
-  "name": "doks",
-  "version": "0.0.0",
-  "description": "Doks theme",
-  "author": "Thulite",
-  "license": "MIT",
-  "scripts": {
-    "create": "hugo new",
-    "dev": "hugo server --disableFastRender --noHTTPCache",
-    "format": "prettier **/** -w -c",
-    "build": "hugo --minify --gc",
-    "preview": "vite preview --outDir public"
-  },
-  "dependencies": {
-    "@hyas/doks-core": "^1.6.1",
-    "@hyas/images": "^3.2.0",
-    "@hyas/inline-svg": "^1.1.0",
-    "@hyas/seo": "^2.3.0",
-    "@tabler/icons": "^3.2.0",
-    "gethyas": "^2.4.2"
-  },
-  "devDependencies": {
-    "prettier": "^3.2.5",
-    "vite": "^5.2.10"
-  },
-  "engines": {
-    "node": ">=20.11.0"
-  }
-}
+>Ainsi, il sera plus facile pour nous de vous partager ```du code```, et les redifusions de nos  [lives Twitch](https://www.twitch.tv/backtobasicsepita)
 
-```
 
-## New development tools
+## A très vite !
 
-Thulite/Doks now uses [Prettier](https://prettier.io/) as a code formatter and [Vite](https://vitejs.dev/) to preview your project's build. You can configure Prettier in the `.prettierrc.yaml` and `.prettierignore` files in the root of your project. With Vite, when you use the `--host` flag, you can preview the build on your local network — for example on your mobile phone — here's how:
+Pour plus d'informations, explorez notre site, inscrivez-vous à nos événements et n'hésitez pas à nous contacter si vous avez des questions. Nous avons hâte de vous rencontrer et de vous aider à réussir vos études à EPITA.
 
-{{< tabs tabTotal="3">}}
-{{% tab title="npm" %}}
+À très bientôt,
 
-```bash
-npm run build -- --baseURL=/ && npm run preview -- --host
-```
 
-{{% /tab %}}
-{{% tab title="pnpm" %}}
+**L'équipe BackToBasics**
 
-```bash
-pnpm build --baseURL=/ && pnpm preview --host
-```
-
-{{% /tab %}}
-{{% tab title="Yarn" %}}
-
-```bash
-yarn run build --baseURL=/ && yarn run preview --host
-```
-
-{{% /tab %}}
-{{< /tabs >}}
-
-<!-- omit in toc -->
-## Bug Fixes
-
-Doks 1.6 also includes several bug fixes. Check out the [release notes](https://github.com/gethyas/doks-core/releases/tag/v1.6.0) to learn more.
