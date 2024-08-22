@@ -1,7 +1,7 @@
 <!-- https://github.com/rvanhorn/hugo-dynamic-tabs -->
-{{ $tabName := .Get "tabName" }}
+{{ $title := .Get "title" }}
 {{ $tabID := delimit (shuffle (slice "a" "b" "c" "d" "e" "f")) "" }}
-{{ .Parent.Scratch.Add "tabName" (slice $tabName) }}
+{{ .Parent.Scratch.Add "title" (slice $title) }}
 {{ .Parent.Scratch.Add "tabID" (slice $tabID) }}
 
 <div class="tab-pane fade{{ if eq .Ordinal 0 }} show active{{ end }}" id="{{ $tabID }}" role="tabpanel" aria-labelledby="nav-1">
