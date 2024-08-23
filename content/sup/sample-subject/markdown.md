@@ -19,7 +19,7 @@ Enfin, on écrit un fichier en Markdown et `Hugo` nous permet de le transformer 
 
 Le `Markdown` est un langage de balisage (un peu comme le `Html`) créer avec comme objectif d'offrire une syntaxe facile à lire et à écrire. 
 
-#### Comment faire du Markdown ?
+#### Pourquoi faire du Markdown ?
 
 Si vous utilisez **Discord** alors vous avez peut-être déjà entendu parlé de `Markdown`, sinon vous allez voir que c'est vraiment très simple à prendre en main :)
 
@@ -64,3 +64,10 @@ Ce **Mot** en gras et celui-là **aussi**.
 
 {{% /tab %}}
 {{< /tabs >}}
+
+#### Comment faire du Markdown ?
+
+|format|Markdown|Résultat|
+|--------|--------|--------|
+|    Italique    |    `*lorem*`    |    *lorem ipsum*   |
+|    C    |    D    ||
