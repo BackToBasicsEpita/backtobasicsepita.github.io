@@ -13,6 +13,9 @@ title = 'BackToBasics'
         path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
         disable = false
 
+[markup.goldmark.renderer]
+  unsafe = true # allow html in md files
+
 [params]
     [params.docs]
         darkMode = true
