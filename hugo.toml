@@ -19,7 +19,29 @@ title = 'BackToBasics'
 [params]
     [params.docs]
         darkMode = true
+        titleIcon = true
+        descriptions = true
+        author = true
         #themeColor = "blue" #blue (default), green, red, yellow, emerald, cardinal, magenta, cyan
     [params.blog]
         showImage = true
+    [params.flexsearch]
+        enabled = true
 
+[markup]
+    [markup.goldmark.renderer]
+        unsafe = true
+    
+    [markup.highlight]
+        anchorLineNos = false
+        codeFences = true
+        guessSyntax = false
+        hl_inline = false
+        lineAnchors = ''
+        lineNoStart = 1
+        lineNos = false
+        lineNumbersInTable = true
+        noClasses = true
+        noHl = false
+        style = 'catppuccin-mocha'
+        tabWidth = 4
