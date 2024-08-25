@@ -1,5 +1,5 @@
 ---
-title: "BackToBasics se fait peau neuve !"
+title: "BackToBasics est de retour !"
 description: "Découvrez notre nouveau site, conçu pour vous offrir un accès simplifié à nos cours de soutien, tutorats et événements."
 summary: "Découvrez notre nouveau site, conçu pour vous offrir un accès simplifié à nos cours de soutien, tutorats et événements."
 date: 2024-08-22T19:50:00+02:00
@@ -32,9 +32,6 @@ Nous avons repensé notre site internet pour plusieurs raisons. Tout d'abord, no
 Le nouveau site est conçu pour être responsive, c'est-à-dire qu'il s'adapte parfaitement à tous les supports, que vous soyez sur un ordinateur, une tablette ou un smartphone.
 
 
->Ainsi, il sera plus facile pour nous de vous partager ```du code```, et les redifusions de nos  [lives Twitch](https://www.twitch.tv/backtobasicsepita)
-
-
 ## A très vite !
 
 Pour plus d'informations, explorez notre site, inscrivez-vous à nos événements et n'hésitez pas à nous contacter si vous avez des questions. Nous avons hâte de vous rencontrer et de vous aider à réussir vos études à EPITA.
@@ -44,3 +41,5 @@ Pour plus d'informations, explorez notre site, inscrivez-vous à nos événement
 
 **L'équipe BackToBasics**
 
+
+<img src="BB.png" alt="drawing" width="50"/>
