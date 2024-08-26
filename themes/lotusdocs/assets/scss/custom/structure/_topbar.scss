@@ -121,10 +121,10 @@
             }
             > a {
                 display: flex;
-                color: $dark;
+                color: var(--body-color);
                 font-size: 15px;
                 background-color: transparent !important;
-                font-weight: 700;
+                font-weight: 500;
                 letter-spacing: 1px;
                 line-height: 24px;
                 // text-transform: uppercase;
@@ -165,7 +165,7 @@
     }
 
     &.nav-sticky{
-        background: #fff;
+        /*background: #fff;*/
         -webkit-box-shadow: 0 0 3px rgba(60,72,88,.15);
         box-shadow: 0 0 3px rgba(60,72,88,.15);
         .navigation-menu {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {{ $.Scratch.Delete "social_list" }}
 <!-- social_list -->
-{{ $social_params := slice "github" "twitter" "instagram" "rss" }}
+{{ $social_params := slice "github" "twitter" "instagram" "rss" "discord" "twitch"}}
 {{ range $social_params }}
     {{ if isset site.Params.social . }}
         {{ $.Scratch.Add "social_list" (slice .) }}
@@ -34,7 +34,7 @@ If so, collect and consolidate the items config from each enabled instance
     
     <body class="page-wrapper toggled list term contributors">
         <div>
-            {{- partial "blog/top-header.html" . -}}
+            {{- partial "header.html" . -}}
         </div>
         <div class="mb-4" id="content" style="padding-top: 100px;">
             <div class="wrap container-fluid">
