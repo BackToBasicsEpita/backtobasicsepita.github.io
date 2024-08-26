@@ -19,7 +19,7 @@ defaultContentLanguage = 'fr'
 [params]
     [params.docs]
         darkMode = true
-        titleIcon = true
+        titleIcon = false
         descriptions = true
         author = true
         #themeColor = "blue" #blue (default), green, red, yellow, emerald, cardinal, magenta, cyan

@@ -1,4 +1,5 @@
 <hr class="doc-hr">
+{{ if or (not (isset .Params "docnav")) .Params.docnav }}
 <div id="doc-nav" class="d-print-none">
 {{ if or .Prev .Next -}}
 	<!-- https://www.feliciano.tech/blog/custom-sort-hugo-single-pages/ -->
@@ -35,3 +36,4 @@
     </div>
 {{ end -}}
 </div>
+{{ end -}}

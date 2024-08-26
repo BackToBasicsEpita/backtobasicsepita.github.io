@@ -148,8 +148,13 @@
                         {{ end }}
                     </div>
                 </div>
+                
                 {{ with .info }}
-                    <p class="text-muted mb-0 mt-3">{{ . | markdownify }}</p>
+                    <a href="docs/qui-sommes-nous" class="text-muted mb-0 mt-3" style="display: inline-block;">
+                        <span class="material-icons align-middle">help</span>
+                        <span style="text-decoration: underline">{{ . | markdownify }}</span>
+                    </a>
+                    
                 {{ end }}
             </div>
 

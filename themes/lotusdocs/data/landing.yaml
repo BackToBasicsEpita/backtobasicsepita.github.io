@@ -44,10 +44,10 @@ hero:
   
   twitch:
     icon: twitch
-    btnText: "Notre chaine twitch"
+    btnText: "La chaine twitch B2B"
     url: "https://www.twitch.tv/backtobasicsepita"
   
-  info: ""
+  info: "Qui sommes nous ?"
 
   supButton:
     icon: school
