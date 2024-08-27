@@ -30,11 +30,11 @@
                     </span>
                     <div class="card-body p-0 content" style="opacity: {{ if $coverImageUrl }}0{{ else }}1{{ end }};">
                         <p class="fs-5 fw-semibold card-title mb-1">{{ .Title }}</p>
-                        <p class="para card-text mb-0">{{ if not $coverImageUrl }} {{ else }} {{ .Description | truncate (.Site.Params.docs.listDescTrunc | default 100) | markdownify }} {{ end }}</p>
+                        <p class="para card-text mb-0">{{ if $coverImageUrl }} {{ else }} {{ .Description | truncate (.Site.Params.docs.listDescTrunc | default 100) | markdownify }} {{ end }}</p>
                     </div>
                     {{ if $redifUrl }}
                     <div class="fade-overlay position-absolute bottom-0 start-0 end-0 p-3">
-                        <p class="text-white mb-0">Redif - {{ .Title }}</p>
+                        <p class="text-white mb-0">{{ .Title }}</p>
                         <i class="material-icons text-white position-absolute end-0 bottom-0 p-2">launch</i>
                     </div>
                     {{ end }}
