@@ -130,7 +130,7 @@
         {{- end }}
         {{- end }}
     {{- else }}
-        {{- $list = (where .Site.Pages "Section" "docs") }}
+        {{- $list = (where .Site.Pages "Section" "in" (slice "blog" "sup" "spe" "ing" "cyb")) }}
     {{- end }}
 
     {{ $len := (len $list) -}}

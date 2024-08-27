@@ -1,6 +1,6 @@
 ---
 title: "Qui sommes nous ?"
-date: "2023-08-26T20:43:23+01:00"
+date: "2024-08-26T20:43:23+01:00"
 author: "Axel Thauvin"
 draft: false
 toc: true

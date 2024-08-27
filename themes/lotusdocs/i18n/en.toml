@@ -36,3 +36,6 @@
 
 [enable_dark_mode]
     other = "Enable dark mode"
+
+[toc]
+    other = "On this page"
