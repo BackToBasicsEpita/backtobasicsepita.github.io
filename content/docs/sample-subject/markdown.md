@@ -67,7 +67,7 @@ Ce **Mot** en gras et celui-là **aussi**.
 
 ### Comment faire du Markdown ?
 
-{{< tabs tabTotal="4">}}
+{{< tabs tabTotal="10">}}
 {{% tab title="Titre" %}}
 
 Vous pouvez mettre des titres comment en `HTML` (`h1`, `h2`, `h3`, ...), pour cela il suffit de mettre :
@@ -151,22 +151,49 @@ def sum(a, b):
 
 {{% /tab %}}
 {{% tab title="Liens" %}}
-Il est également possible d'intégrer des liens (vers autre site, document, section)
+Il est également possible d'intégrer des liens (vers autre site, document, section) en faisant :
 
+```markdown
+Autre site : [Texte à afficher](https://googls.com)
+Autre Page/document : [Texte à afficher](overview.md)
+Section : [Texte à afficher](#cheat-sheet-markdown)
+```
+
+Autre site : [Texte à afficher](https://googls.com)
+Autre Page/document : [Texte à afficher](overview.md)
+Section : [Texte à afficher](#cheat-sheet-markdown)
+
+{{% /tab %}}
+{{% tab title="Annotation" %}}
+Pour faire des annotations, vous pouvez écrire `[^n]` juste après un mot en remplaçant *n* par un nombre.
+
+Ensuite, pour activer votre annotation, vous devrez aller sur une nouvelle ligne et écrire : `[^n]: Ce qu'il faut marquer ici` et hugo se chargera de mettre l'annotation en bas de la page.
+{{% /tab %}}
+{{% tab title="Image" %}}
+IMAGE
+{{% /tab %}}
+{{% tab title="Liste" %}}
+LISTE
+{{% /tab %}}
+{{% tab title="paragraphe" %}}
+Si vous voulez faire un nouveau paragraphe, vous devez faire **2 retours à la ligne**.
+{{% /tab %}}
+{{% tab title="Annuler le formatage" %}}
+Si vous voulez annuler le formatage du markdown, vous devrez utiliser un `\` avant le charactère que vous voudrez utiliser.
 {{% /tab %}}
 {{< /tabs >}}
 
 
 ### Cheat-sheet Markdown
 
-|Format|Syntaxe|Exemple|
+|   Format  |   Syntaxe |   Exemple    |
 |--------|--------|--------|
-|    header   |   `#`, `#`, ...  |          `# texte en h1`|
-|    Italique    |    `* *` ou `_ _`    |   `*lorem ipsum*`       |
-|    Gras    |    `** **` ou `__ __`      |   `**lorem ipsum**`     |
-|    Gras + italique    |    `*** ***`       |   `***lorem ipsum***`     |
-|    Barré    |    `~~ ~~`       |   `~~lorem ipsum~~`     |
-|    Citation (Texte)    |    `> `       |   `> lorem ipsum`     |
-|    Citation (Code une ligne)           |   `` ` ` `` ou ``` `` `` ```       | ``` ``Hello`` ```|
-|    Citation (Code multi-ligne)         |    \`\`\`langage retour à la ligne \`\`\`    | *cf exemple au dessus* |
-
+|   Header  |   `#`, `#`, ...  |          `# texte en h1`|
+|   Italique    |    `* *` ou `_ _`    |   `*lorem ipsum*`       |
+|   Gras    |    `** **` ou `__ __`      |   `**lorem ipsum**`     |
+|   Gras + italique |    `*** ***`       |   `***lorem ipsum***`     |
+|   Barré   |    `~~ ~~`       |   `~~lorem ipsum~~`     |
+|   Citation (Texte)    |    `> `       |   `> lorem ipsum`     |
+|   Citation (Code une ligne)   |   `` ` ` `` ou ``` `` `` ```       | ``` ``Hello`` ```|
+|   Citation (Code multi-ligne) |    \`\`\`langage + retour à la ligne \`\`\`    | *cf exemple au dessus* |
+|   Liens   |   ||
