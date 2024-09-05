@@ -1,16 +1,16 @@
 ---
 weight: 500
-title: "Comment écrire un sujet ?"
+title: "Comment faire du markdown ?"
 description: "Comment les sujets sont écrits ?"
 icon: "fluid_med"
 date: "2023-08-26T20:43:23+01:00"
 lastmod: "2023-08-26T20:43:23+01:00"
 draft: false
-toc: true
+toc: false
 katex: true
 ---
 
-## Markdown ?
+# Markdown ?
 
 Le LaTeX c'est bien beau mais si on doit faire tous nos cours comme ça, ça nous prendrait une éternité pour couvrir tous les chapitres :c.
 
@@ -19,7 +19,7 @@ Enfin, on écrit un fichier en Markdown et `Hugo` nous permet de le transformer 
 
 Le `Markdown` est un langage de balisage (un peu comme le `Html`) créer avec comme objectif d'offrire une syntaxe facile à lire et à écrire. 
 
-### Pourquoi faire du Markdown ?
+# Pourquoi faire du Markdown ?
 
 Si vous utilisez **Discord** alors vous avez peut-être déjà entendu parlé de `Markdown`, sinon vous allez voir que c'est vraiment très simple à prendre en main :)
 
@@ -65,10 +65,9 @@ Ce **Mot** en gras et celui-là **aussi**.
 {{% /tab %}}
 {{< /tabs >}}
 
-### Comment faire du Markdown ?
+# Comment faire du Markdown ?
 
-{{< tabs tabTotal="10">}}
-{{% tab title="Titre" %}}
+## Titre
 
 Vous pouvez mettre des titres comment en `HTML` (`h1`, `h2`, `h3`, ...), pour cela il suffit de mettre :
 
@@ -90,8 +89,8 @@ Résultat :
 #### h4
 ##### h5
 ###### h6
-{{% /tab %}}
-{{% tab title="Style" %}}
+
+## Style
 
 Vous pouvez aussi mettre votre texte en **Gras**, *Italique*, ~~Barré~~, pour cela, il suffit :
 
@@ -110,16 +109,15 @@ Vous pouvez aussi mettre votre texte en **Gras**, *Italique*, ~~Barré~~, pour c
 ~~Texte Barré~~
 
 Après, libre à vous de combiner ces styles pour faire : **Lorem *Ipsum* ~~dolor sit~~ amet** 
-{{% /tab %}}
-{{% tab title="Citation (Texte)" %}}
+
+## Citation (Texte)
 Maintenant, si vous voulez citer quelqu'un, vous pouvez faire : `> citation`
 
 > C'est véritablement utile puisque c'est joli
 
 
-{{% /tab %}}
 
-{{% tab title="Citation (Code)" %}}
+## Citation (Code)
 Vous voulez présenter un code, alors il vous faudra choisir un `langage` et un bout de code à adapter
 ```md
 Pour insérer du `Code` sur une seule ligne mais si votre code contient déjà des \` alors, vous pouvez mettre votre ``Code``.
@@ -149,8 +147,8 @@ def sum(a, b):
 ```
 
 
-{{% /tab %}}
-{{% tab title="Liens" %}}
+
+## Liens
 Il est également possible d'intégrer des liens (vers autre site, document, section) en faisant :
 
 ```markdown
@@ -163,25 +161,23 @@ Autre site : [Texte à afficher](https://googls.com)
 Autre Page/document : [Texte à afficher](overview.md)
 Section : [Texte à afficher](#cheat-sheet-markdown)
 
-{{% /tab %}}
-{{% tab title="Annotation" %}}
+
+## Annotation
 Pour faire des annotations, vous pouvez écrire `[^n]` juste après un mot en remplaçant *n* par un nombre.
 
 Ensuite, pour activer votre annotation, vous devrez aller sur une nouvelle ligne et écrire : `[^n]: Ce qu'il faut marquer ici` et hugo se chargera de mettre l'annotation en bas de la page.
-{{% /tab %}}
-{{% tab title="Image" %}}
-IMAGE
-{{% /tab %}}
-{{% tab title="Liste" %}}
+
+## Images
+`![placeholder](resources)`
+
+## Liste
 LISTE
-{{% /tab %}}
-{{% tab title="paragraphe" %}}
+
+## Paragraphe
 Si vous voulez faire un nouveau paragraphe, vous devez faire **2 retours à la ligne**.
-{{% /tab %}}
-{{% tab title="Annuler le formatage" %}}
+
+## Annuler le formatage
 Si vous voulez annuler le formatage du markdown, vous devrez utiliser un `\` avant le charactère que vous voudrez utiliser.
-{{% /tab %}}
-{{< /tabs >}}
 
 
 ### Cheat-sheet Markdown
