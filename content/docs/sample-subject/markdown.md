@@ -17,11 +17,11 @@ Le LaTeX c'est bien beau mais si on doit faire tous nos cours comme ça, ça nou
 C'est pour ça que les sujets sont écrits en `Markdown`.
 Enfin, on écrit un fichier en Markdown et `Hugo` nous permet de le transformer en page `Html` automatiquement.
 
-Le `Markdown` est un langage de balisage (un peu comme le `Html`) créer avec comme objectif d'offrire une syntaxe facile à lire et à écrire. 
+Le `Markdown` est un langage de balisage (un peu comme le `Html`) crée avec comme objectif d'offrir une syntaxe facile à lire et à écrire. 
 
 # Pourquoi faire du Markdown ?
 
-Si vous utilisez **Discord** alors vous avez peut-être déjà entendu parlé de `Markdown`, sinon vous allez voir que c'est vraiment très simple à prendre en main :)
+Si vous utilisez **Discord**, vous avez peut-être déjà entendu parler de `Markdown`, sinon vous allez voir que c'est vraiment très simple à prendre en main :)
 
 Voici un exemple montrant la simplicité du `Markdown` par rapport au `Html` et `LaTex`
 
@@ -69,7 +69,7 @@ Ce **Mot** en gras et celui-là **aussi**.
 
 ## Titre
 
-Vous pouvez mettre des titres comment en `HTML` (`h1`, `h2`, `h3`, ...), pour cela il suffit de mettre :
+Pour écrire des *titres* comme en `HTML` (`h1`, `h2`, `h3`, ...), pour cela il suffit de mettre :
 
 
 ```md
@@ -92,7 +92,10 @@ Résultat :
 
 ## Style
 
-Vous pouvez aussi mettre votre texte en **Gras**, *Italique*, ~~Barré~~, pour cela, il suffit :
+Pour mettre le texte en **Gras**, *Italique*, ~~Barré~~, il suffit d'entourer votre texte avec :
+- **Gras** : `**` ou `__`
+- *Italique* : `*` ou `_`
+- ~~Barré~~ : `~~`
 
 ```md
 **Texte en Gras** __Texte en Gras__
@@ -108,25 +111,34 @@ Vous pouvez aussi mettre votre texte en **Gras**, *Italique*, ~~Barré~~, pour c
 
 ~~Texte Barré~~
 
-Après, libre à vous de combiner ces styles pour faire : **Lorem *Ipsum* ~~dolor sit~~ amet** 
+Il est possible de combiner ces styles pour faire : **Lorem *Ipsum* ~~dolor sit~~ amet**. 
 
 ## Citation (Texte)
-Maintenant, si vous voulez citer quelqu'un, vous pouvez faire : `> citation`
 
-> C'est véritablement utile puisque c'est joli
+Pour faire une citation, il faut faire rajouter le signe `>` devant votre texte.
+
+`> citation`
+
+> C'est véritablement utile puisque c'est joli.
 
 
 
 ## Citation (Code)
-Vous voulez présenter un code, alors il vous faudra choisir un `langage` et un bout de code à adapter
+
+Pour mettre en forme du code ou alors le démarquer du reste du texte,
+plutôt que de le mettre en gras ou en italique, il faut faire une citation de code.
+Pour cela, il suffit d'entourer son extrait de code avec des `` ` `` ou bien ``` `` ```. **Attention** à bien veiller à avoir le même nombre de `` ` `` au début et à la fin de l'extrait de texte sinon la citation ne fonctionnera pas.
+
+Maintenant, pour présenter du code sur plusieurs lignes, il faudra choisir un `langage` et un bout de code à adapter.
+
 ```md
-Pour insérer du `Code` sur une seule ligne mais si votre code contient déjà des \` alors, vous pouvez mettre votre ``Code``.
+Pour insérer du `Code` sur une seule ligne mais si votre code contient déjà des ` alors, vous pouvez mettre votre ``Code``.
 
 Pour insérer du code sur plusieurs lignes, vous pouvez faire de cette façon.
 
 \`\`\`python
 
-# Vous pouvez maintenant insérer du code dans entre ces deux lignes et si vous avez précisé le langage alors, il y aura une jolie syntaxe :).
+# Il est maintenant possible d'insérer du code entre ces deux lignes et si un langage est précisé, alors, il y aura une jolie syntaxe :).
 
 def sum(a, b):
     return a + b
@@ -135,7 +147,7 @@ def sum(a, b):
 
 ```
 
-Pour insérer du `Code` sur une seule ligne mais si votre code contient déjà des ` alors, vous pouvez mettre votre ``Code``.
+Pour insérer du `Code` sur une seule ligne mais si votre code contient déjà des `` ` `` alors, vous pouvez mettre votre ``Code``.
 
 ```python
 
@@ -146,50 +158,58 @@ def sum(a, b):
 
 ```
 
+## Annotation
+
+Une annotation en markdown se fait de la manière suivante `[^n]` juste après un mot en remplaçant *n* par un nombre.
+
+Ensuite, pour activer l'annotation, sur une nouvelle ligne, écrire : `[^n]: Ce qu'il faut marquer ici` et hugo se chargera de mettre l'annotation en bas de la page.
+
+Voici un joli texte[^1]
+[^1]: Ceci est un texte d'exemple.
 
 
 ## Liens
+
 Il est également possible d'intégrer des liens (vers autre site, document, section) en faisant :
 
 ```markdown
 Autre site : [Texte à afficher](https://googls.com)
+
 Autre Page/document : [Texte à afficher](overview.md)
+
 Section : [Texte à afficher](#cheat-sheet-markdown)
 ```
 
 Autre site : [Texte à afficher](https://googls.com)
+
 Autre Page/document : [Texte à afficher](overview.md)
+
 Section : [Texte à afficher](#cheat-sheet-markdown)
 
-
-## Annotation
-Pour faire des annotations, vous pouvez écrire `[^n]` juste après un mot en remplaçant *n* par un nombre.
-
-Ensuite, pour activer votre annotation, vous devrez aller sur une nouvelle ligne et écrire : `[^n]: Ce qu'il faut marquer ici` et hugo se chargera de mettre l'annotation en bas de la page.
-
-## Images
-`![placeholder](resources)`
-
 ## Liste
-LISTE
+
+Il existe plusieurs façons de faire une liste (avec ou sans ordre).
+- Pour faire une liste **sans** ordre, il suffit de mettre le char `-`, `+`, `*` au début de la ligne et suivi d'un espace pour créer une nouvel item.
+- Pour faire une liste **avec** ordre, il suffit de mettre le numéro de l'item comme ceci: `n.` avec n le numéro de votre item. 
+
+Exemple:
+```md
+liste sans ordre:
+
+- item 1
+* item 2
++ item 3
++ item 4
+- item 5
+
+liste avec ordre:
+1. item 1
+2. item 2
+3. item 3
+```
 
 ## Paragraphe
-Si vous voulez faire un nouveau paragraphe, vous devez faire **2 retours à la ligne**.
+Pour faire un nouveau paragraphe, il faudra **2 retours à la ligne**.
 
 ## Annuler le formatage
-Si vous voulez annuler le formatage du markdown, vous devrez utiliser un `\` avant le charactère que vous voudrez utiliser.
-
-
-### Cheat-sheet Markdown
-
-|   Format  |   Syntaxe |   Exemple    |
-|--------|--------|--------|
-|   Header  |   `#`, `#`, ...  |          `# texte en h1`|
-|   Italique    |    `* *` ou `_ _`    |   `*lorem ipsum*`       |
-|   Gras    |    `** **` ou `__ __`      |   `**lorem ipsum**`     |
-|   Gras + italique |    `*** ***`       |   `***lorem ipsum***`     |
-|   Barré   |    `~~ ~~`       |   `~~lorem ipsum~~`     |
-|   Citation (Texte)    |    `> `       |   `> lorem ipsum`     |
-|   Citation (Code une ligne)   |   `` ` ` `` ou ``` `` `` ```       | ``` ``Hello`` ```|
-|   Citation (Code multi-ligne) |    \`\`\`langage + retour à la ligne \`\`\`    | *cf exemple au dessus* |
-|   Liens   |   ||
+Pour annuler le formatage du markdown, il faut utiliser un `\` avant le charactère souhaité.
