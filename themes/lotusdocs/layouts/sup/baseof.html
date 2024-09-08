@@ -2,7 +2,7 @@
 {{ $.Scratch.Delete "social_list" }}
 {{ $.Scratch.Set "pathName" (printf "%s" (.Site.Params.docs.pathName | default "docs")) }}
 <!-- social_list -->
-{{ $social_params := slice "github" "twitter" "instagram" "rss" }}
+{{ $social_params := slice "github" "twitter" "instagram" "rss" "discord" "twitch"}}
 {{ range $social_params }}
     {{ if isset site.Params.social . }}
         {{ $.Scratch.Add "social_list" (slice .) }}
@@ -54,10 +54,30 @@
                                                         <span class="badge bg-default fs-6 mb-1 align-middle">DRAFT</span>
                                                     {{ end }}
                                                 </h1>
+
                                             </div>
+
                                             {{ if site.Params.docs.descriptions | default false }}
-                                                <p class="lead mb-3">{{ $currentPage.Description | markdownify }}</p>
+                                                <p class="lead mb-3" style="margin-bottom: 0.2rem !important;">{{ $currentPage.Description | markdownify }}</p>
                                             {{ end }}
+                                            
+                                            
+                                            <p class="lead mb-3" style="font-size: 15px">
+                                                {{ if .Date }}
+                                                    {{ .Date | time.Format ":date_medium" }} 
+                                                {{ end }}
+
+                                                {{ if and .Date (isset .Params "author") }}
+                                                    &nbsp;·&nbsp;
+                                                {{ end }}
+
+                                                {{ if isset .Params "author" }}
+                                                    {{ with .Params.author }}
+                                                        {{ . }}
+                                                    {{ end }}
+                                                {{ end }}
+
+                                            </p> 
                                             <div id="content" class="main-content" {{ if eq .Site.Params.docs.toc true -}}data-bs-spy="scroll" data-bs-root-margin="0px 0px -65%" data-bs-target="#toc-mobile"{{ end }}>
                                                 {{ block "main" . }}{{ end }}
                                             </div>

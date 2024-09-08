@@ -36,3 +36,5 @@
 
 [enable_dark_mode]
     other = "Activer le mode sombre"
+[toc]
+    other = "Sur cette page"

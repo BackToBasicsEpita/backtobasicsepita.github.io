@@ -24,15 +24,18 @@
             }
         </style>
 {{ end }}
-<section id="{{ $sectionTitle }}" class="d-table w-100 overflow-hidden hero">
+<section id="{{ $sectionTitle }}" class="d-table w-100 overflow-hidden hero" style="background-image: none;">
     <div class="container">
         <div class="row mt-5 align-items-center">
 
             <div class="col-lg-6 col-md-6">
                 <div class="title-heading">
+                    
+                    
                     {{ with .badge }}
                     <span class="badge {{ if eq .pill true }}rounded-pill{{ end }} bg-{{ if eq .soft true }}soft-{{ else }}hard-{{ end }}{{ .color }} mb-1">{{ .text }}</span>
                     {{ end }}
+
                     <h4 class="heading mt-0 mb-3">
                         {{ with .titleLogo }}
                             {{ $path := .path | default "images" }}
@@ -61,8 +64,50 @@
                     {{ end }}
 
                     <div class="mt-3">
-                        {{ with .ctaButton }}
-                            <a href="{{ relLangURL .Site.Data.landing.hero.ctaButton.url }}" class="btn btn-lg btn-primary me-2 mt-2">
+                        {{ with .discord_button }}
+                            <a href="{{ relLangURL .url }}" target="_blank" class="btn btn-lg btn-primary me-2 mt-2" style="background-color: #5865F2 !important; color: white !important; border: none !important">
+                                <span style="margin-right: 8px;">
+                                {{ with .icon }}
+                                    {{ $path := printf "images/social/%s.%s" . "svg" }}
+                                    {{ with resources.Get $path}}
+                                        {{ .Content | safeHTML }}
+                                    {{ end }}
+                                {{ end }}
+                                </span>
+                                
+                                {{ with .btnText }}
+                                    {{ . }}
+                                {{ end }}
+                            </a>
+                        {{ end }}
+                        {{ with .twitch }}
+                            <a href="{{ relLangURL .url }}" target="_blank" class="btn btn-lg btn-primary me-2 mt-2" style="background-color: #a970ff !important; color: white !important;  border: none !important">
+                                <span style="margin-right: 8px;">
+                                {{ with .icon }}
+                                    {{ $path := printf "images/social/%s.%s" . "svg" }}
+                                    {{ with resources.Get $path}}
+                                        {{ .Content | safeHTML }}
+                                    {{ end }}
+                                {{ end }}
+                                </span>
+                                
+                                {{ with .btnText }}
+                                    {{ . }}
+                                {{ end }}
+                            </a>
+                        {{ end }}
+                        
+                    </div>
+                    
+                    {{ with .subtitle2 }}
+                    <p class="para-desc text-muted mb-0">{{ . | markdownify }}</p>
+                    {{ end }}
+
+                    
+
+                    <div class="mt-3" style="">
+                        {{ with .supButton }}
+                            <a href="{{ relLangURL .url }}" class="btn btn-lg btn-outline-primary mt-2"> <!-- btn btn-lg btn-primary me-2 mt-2 -->
                                 {{ with .icon }}
                                     <span class="material-icons align-middle">{{ . }}</span>
                                 {{ end }}
@@ -71,7 +116,27 @@
                                 {{ end }}
                             </a>
                         {{ end }}
-                        {{ with .cta2Button }}
+                        {{ with .speButton }}
+                        <a href="{{ relLangURL .url }}" class="btn btn-lg btn-outline-primary mt-2">
+                            {{ with .icon }}
+                                <span class="material-icons align-middle">{{ . }}</span>
+                            {{ end }}
+                            {{ with .btnText }}
+                                {{ . }}
+                            {{ end }}
+                        </a>
+                        {{ end }}
+                        {{ with .ingButton }}
+                        <a href="{{ relLangURL .url }}" class="btn btn-lg btn-outline-primary mt-2">
+                            {{ with .icon }}
+                                <span class="material-icons align-middle">{{ . }}</span>
+                            {{ end }}
+                            {{ with .btnText }}
+                                {{ . }}
+                            {{ end }}
+                        </a>
+                        {{ end }}
+                        {{ with .cybButton }}
                         <a href="{{ relLangURL .url }}" class="btn btn-lg btn-outline-primary mt-2">
                             {{ with .icon }}
                                 <span class="material-icons align-middle">{{ . }}</span>
@@ -82,11 +147,15 @@
                         </a>
                         {{ end }}
                     </div>
-
-                    {{ with .info }}
-                    <p class="text-muted mb-0 mt-3">{{ . | markdownify }}</p>
-                    {{ end }}
                 </div>
+                
+                {{ with .info }}
+                    <a href="docs/qui-sommes-nous" class="text-muted mb-0 mt-3" style="display: inline-block;">
+                        <span class="material-icons align-middle">help</span>
+                        <span style="text-decoration: underline">{{ . | markdownify }}</span>
+                    </a>
+                    
+                {{ end }}
             </div>
 
             <div class="col-lg-6 col-md-6 mt-4 pt-4 mt-sm-0 pt-sm-0">

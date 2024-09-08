@@ -1,6 +1,9 @@
 baseURL = 'https://backtobasics.github.io/'
-languageCode = 'en-us'
+languageCode = 'fr'
 title = 'BackToBasics'
+
+defaultContentLanguage = 'fr'
+
 
 [module]
     # uncomment line below for temporary local development of module,
@@ -16,7 +19,7 @@ title = 'BackToBasics'
 [params]
     [params.docs]
         darkMode = true
-        titleIcon = true
+        titleIcon = false
         descriptions = true
         author = true
         #themeColor = "blue" #blue (default), green, red, yellow, emerald, cardinal, magenta, cyan
@@ -42,3 +45,13 @@ title = 'BackToBasics'
         noHl = false
         style = 'catppuccin-mocha'
         tabWidth = 4
+
+[[menu.primary]]
+    name  = "Annonces"
+    url = "/blog/"
+    identifier = "blog"
+    weight = 10
+
+[params.social]
+    discord = "PtXWatnH4j"
+    twitch = "backtobasicsepita"
