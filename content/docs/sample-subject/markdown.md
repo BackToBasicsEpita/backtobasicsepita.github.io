@@ -4,7 +4,6 @@ title: "Comment faire du markdown ?"
 description: "Comment les sujets sont-ils écrits ?"
 icon: "fluid_med"
 date: "2023-08-26T20:43:23+01:00"
-lastmod: "2023-08-26T20:43:23+01:00"
 draft: false
 toc: false
 katex: true

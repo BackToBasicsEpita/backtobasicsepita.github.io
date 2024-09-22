@@ -1,12 +1,10 @@
 ---
+weight: 999
 title: "{{ replace .Name "-" "" | title }}"
-date: {{ .Date }}
-authors: ["FIXME"]
-weight: 500
 description: "FIXME"
 icon: "FIXME"
+date: {{ .Date }}
 draft: false
-toc: false
-katex: true
+toc: true
+katex: false
 ---
-

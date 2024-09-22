@@ -3,19 +3,12 @@ title: "BackToBasics est de retour !"
 description: "Découvrez notre nouveau site, conçu pour vous offrir un accès simplifié à nos cours de soutien, tutorats et événements."
 summary: "Découvrez notre nouveau site, conçu pour vous offrir un accès simplifié à nos cours de soutien, tutorats et événements."
 date: 2024-08-22T19:50:00+02:00
-lastmod: 2024-08-22T19:50:00+02:00
 draft: false
 weight: 50
 categories: []
 tags: []
 contributors: ["Axel Thauvin"]
-pinned: true
-homepage: false
-seo:
-  title: "" # custom title (optional)
-  description: "" # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  noindex: false # false (default) or true
+cover: "BackToBasics_Horizontal_cover.png"
 ---
 
 
@@ -42,4 +35,4 @@ Pour plus d'informations, explorez notre site, inscrivez-vous à nos événement
 **L'équipe BackToBasics**
 
 
-<img src="BB.png" alt="drawing" width="50"/>
+<img src="images/BB.png" alt="drawing" width="50"/>
