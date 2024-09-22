@@ -11,6 +11,7 @@ tags: []
 contributors: ["Axel Thauvin"]
 pinned: true
 homepage: false
+cover: "BackToBasics_Horizontal_cover.png"
 seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
@@ -42,4 +43,4 @@ Pour plus d'informations, explorez notre site, inscrivez-vous à nos événement
 **L'équipe BackToBasics**
 
 
-<img src="BB.png" alt="drawing" width="50"/>
+<img src="images/BB.png" alt="drawing" width="50"/>
