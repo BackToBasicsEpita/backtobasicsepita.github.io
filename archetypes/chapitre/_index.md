@@ -1,6 +1,6 @@
 ---
 weight: 999
-title: "FIXME"
+title: "{{ replace .Name "-" "" | title }}"
 description: "FIXME"
 icon: "FIXME"
 date: {{ .Date }}
